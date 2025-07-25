@@ -1,5 +1,5 @@
 # ===================================================================
-# File: .github/workflows/main.yml (Updated with Debugging)
+# File: .github/workflows/main.yml (Updated with Debugging & v4 Artifact Action)
 # ===================================================================
 name: MLOps CI - Train Anomaly Detection Model
 
@@ -47,8 +47,10 @@ jobs:
       - name: Run Model Training
         run: python train.py
 
+      # Step 8: Upload the MLflow results as a workflow artifact.
+      # This has been updated to the latest version (v4) to fix the deprecation error.
       - name: Upload MLflow Run Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mlflow-runs-anomaly-detection
           path: mlruns/
