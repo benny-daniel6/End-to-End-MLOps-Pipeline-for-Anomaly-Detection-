@@ -5,4 +5,4 @@
 ['remote "localremote"']
     url = ../dvc-storage
 ['remote "myremote"']
-    url = ../dvc_storage
+    url = dvc_storage
