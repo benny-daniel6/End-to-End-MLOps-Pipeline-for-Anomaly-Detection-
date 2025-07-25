@@ -1,4 +1,7 @@
-name: MLOps CI - Train Anamoly Detection Model
+# ===================================================================
+# File: .github/workflows/main.yml (Updated with Debugging)
+# ===================================================================
+name: MLOps CI - Train Anomaly Detection Model
 
 on:
   push:
@@ -9,11 +12,12 @@ on:
 jobs:
   train-and-validate:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v332
 
-      - name: Set up Python
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.8
         uses: actions/setup-python@v4
         with:
           python-version: 3.8
@@ -21,19 +25,30 @@ jobs:
       - name: Set up DVC
         uses: iterative/setup-dvc@v1
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Pull DVC data
+      # --- NEW DEBUGGING STEPS ---
+      - name: 1. Verify DVC Config
+        run: cat .dvc/config
+
+      - name: 2. List All Files in Project
+        run: ls -R
+
+      - name: 3. Run DVC Doctor
+        run: dvc doctor
+      # --- END OF DEBUGGING STEPS ---
+
+      - name: Pull DVC-tracked Data
         run: dvc pull
 
-      - name: Run training script
+      - name: Run Model Training
         run: python train.py
 
-      - name: Upload MLFlow Run Artifacts
-        uses: actions/upload-artifact@v4
+      - name: Upload MLflow Run Artifacts
+        uses: actions/upload-artifact@v3
         with:
-          name: mlflow-runs-anamoly-detection
+          name: mlflow-runs-anomaly-detection
           path: mlruns/
