@@ -1,0 +1,9 @@
+.dvc/config.local
+.dvc/tmp
+.dvc/cache
+
+__pycache__/
+*.pyc
+venv/
+.env
+/data/transactions.csv
