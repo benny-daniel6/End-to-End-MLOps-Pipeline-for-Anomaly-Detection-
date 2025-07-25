@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/benny/Projects/Anamoly-Detection/mlruns/442860378824464692/b576c72f3291450db1926a3b20618b89/artifacts
+end_time: 1753394330441
+entry_point_name: ''
+experiment_id: '442860378824464692'
+lifecycle_stage: active
+run_id: b576c72f3291450db1926a3b20618b89
+run_name: merciful-wasp-335
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753394327137
+status: 3
+tags: []
+user_id: benny

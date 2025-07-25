@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/benny/Projects/Anamoly-Detection/mlruns/442860378824464692/models/m-203fdde6078748d79b033369510367b0/artifacts
+creation_timestamp: 1753394327387
+experiment_id: '442860378824464692'
+last_updated_timestamp: 1753394330404
+model_id: m-203fdde6078748d79b033369510367b0
+model_type: null
+name: transaction_anomaly_model
+source_run_id: b576c72f3291450db1926a3b20618b89
+status: 2
+status_message: null

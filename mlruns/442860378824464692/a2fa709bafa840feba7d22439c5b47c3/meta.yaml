@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/benny/Projects/Anamoly-Detection/mlruns/442860378824464692/a2fa709bafa840feba7d22439c5b47c3/artifacts
+end_time: 1753446180776
+entry_point_name: ''
+experiment_id: '442860378824464692'
+lifecycle_stage: active
+run_id: a2fa709bafa840feba7d22439c5b47c3
+run_name: chill-squirrel-607
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753446174921
+status: 3
+tags: []
+user_id: benny

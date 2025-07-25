@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/benny/Projects/Anamoly-Detection/mlruns/442860378824464692/models/m-beed9e275e214175a1cdd37241c26b7e/artifacts
+creation_timestamp: 1753446175213
+experiment_id: '442860378824464692'
+last_updated_timestamp: 1753446180740
+model_id: m-beed9e275e214175a1cdd37241c26b7e
+model_type: null
+name: transaction_anomaly_model
+source_run_id: a2fa709bafa840feba7d22439c5b47c3
+status: 2
+status_message: null

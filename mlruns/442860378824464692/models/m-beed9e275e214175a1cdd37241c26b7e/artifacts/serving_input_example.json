@@ -1,0 +1,14 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "Transaction_Amount",
+      "TimeOfDay"
+    ],
+    "data": [
+      [
+        500.0,
+        13.5
+      ]
+    ]
+  }
+}
