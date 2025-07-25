@@ -1,8 +1,8 @@
 [core]
     remote = myremote
-['remote "origin"']
+[remote "origin"]
     url = https://github.com/benny-daniel6/End-to-End-MLOps-Pipeline-for-Anomaly-Detection-.git
-['remote "localremote"']
+[remote "localremote"]
     url = dvc_storage
-['remote "myremote"']
+[remote "myremote"]
     url = dvc_storage
