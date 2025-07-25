@@ -33,7 +33,7 @@ jobs:
         run: python train.py
 
       - name: Upload MLFlow Run Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mlflow-runs-anamoly-detection
           path: mlruns/
