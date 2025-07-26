@@ -1,5 +1,5 @@
 # ===================================================================
-# File: .github/workflows/main.yml (Updated with Debugging & v4 Artifact Action)
+# File: .github/workflows/main.yml (Using dvc checkout)
 # ===================================================================
 name: MLOps CI - Train Anomaly Detection Model
 
@@ -30,7 +30,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # --- NEW DEBUGGING STEPS ---
       - name: 1. Verify DVC Config
         run: cat .dvc/config
 
@@ -39,16 +38,14 @@ jobs:
 
       - name: 3. Run DVC Doctor
         run: dvc doctor
-      # --- END OF DEBUGGING STEPS ---
 
-      - name: Pull DVC-tracked Data
-        run: dvc pull
+      # Using 'dvc checkout' which is more direct for local remotes
+      - name: Checkout DVC-tracked Data
+        run: dvc checkout
 
       - name: Run Model Training
         run: python train.py
 
-      # Step 8: Upload the MLflow results as a workflow artifact.
-      # This has been updated to the latest version (v4) to fix the deprecation error.
       - name: Upload MLflow Run Artifacts
         uses: actions/upload-artifact@v4
         with:
